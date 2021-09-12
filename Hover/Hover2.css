@@ -1,0 +1,116 @@
+body {
+  height: 100vh;
+  background: #0f2027;
+  background: linear-gradient(120deg, #2c5364, #203a43, #0f2027);
+  font-family: "Jua", sans-serif;
+}
+
+.hover_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hover_wrap figure {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(45deg, #874da2, #c43a30);
+}
+
+.hover_wrap figure img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.hover_wrap figure.hover3::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #fff;
+  left: 100%;
+  top: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap figure.hover3::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  background: #fff;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap figure.hover3:hover img {
+  opacity: 0.6;
+}
+
+.hover_wrap figure.hover3:hover::before {
+  left: 50%;
+  opacity: 1;
+}
+
+.hover_wrap figure.hover3:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+.hover_wrap figure.hover4::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap figure.hover4::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  background: #fff;
+  left: 50%;
+  top: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.hover_wrap figure.hover4:hover img {
+  opacity: 0.6;
+}
+
+.hover_wrap figure.hover4:hover::before {
+  left: 50%;
+  opacity: 1;
+}
+
+.hover_wrap figure.hover4:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .hover_wrap {
+    flex-direction: column;
+  }
+}
